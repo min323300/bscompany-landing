@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="비에스컴퍼니 - 블로그 콘텐츠, 쇼츠/영상 제작, SNS 마케팅, 외식 컨설팅, 사업자 환급, 비즈니스 컨설팅 전문">
+    <title>비에스컴퍼니 | 비즈니스 성장 파트너</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Malgun Gothic", sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #fff;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        section {
+            padding: 60px 20px;
+        }
+        
+        section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: #667eea;
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .service-card p {
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .features {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .features h2,
+        .features .subtitle {
+            color: white;
+        }
+        
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .feature-item .icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .feature-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .about {
+            background: #f8f9fa;
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: white;
+            color: #f5576c;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 15px 40px;
+            border: 2px solid white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #f5576c;
+        }
+        
+        .info-section {
+            background: #2c3e50;
+            color: white;
+            padding: 60px 20px;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .info-item {
+            text-align: center;
+        }
+        
+        .info-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+        
+        .info-item p {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .privacy {
+            background: #f8f9fa;
+            padding: 60px 20px;
+        }
+        
+        .privacy-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .privacy-content h3 {
+            font-size: 1.3rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .privacy-content p,
+        .privacy-content ul {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .privacy-content ul {
+            padding-left: 20px;
+        }
+        
+        footer {
+            background: #1a1a1a;
+            color: #aaa;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        footer p {
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            header p {
+                font-size: 1rem;
+            }
+            
+            section h2 {
+                font-size: 1.6rem;
+            }
+            
+            .services-grid,
+            .features-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+            }
+            
+            .privacy-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>비에스컴퍼니</h1>
+            <p>당신의 비즈니스 성장을 위한 올인원 솔루션</p>
+            <a href="https://forms.gle/cs4kZ7Xwyi9U3Rrg7" class="cta-button" target="_blank">무료 상담 신청하기</a>
+        </div>
+    </header>
+
+    <section id="services">
+        <div class="container">
+            <h2>제공 서비스</h2>
+            <p class="subtitle">비즈니스 성장에 필요한 모든 것을 한곳에서</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">📝</div>
+                    <h3>블로그 콘텐츠 제작</h3>
+                    <p>검색 노출에 최적화된 전문 콘텐츠로 온라인 가시성을 높입니다. SEO 최적화된 양질의 포스팅으로 고객 유입을 늘려드립니다.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🎬</div>
+                    <h3>쇼츠/영상 제작</h3>
+                    <p>유튜브 쇼츠, 인스타그램 릴스 등 숏폼 콘텐츠 전문 제작. 트렌디하고 바이럴에 강한 영상으로 브랜드 인지도를 높입니다.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>소셜미디어 마케팅</h3>
+                    <p>인스타그램, 페이스북, 블로그 등 다양한 채널을 통한 통합 마케팅. 타겟 고객에게 정확하게 도달하는 전략을 제공합니다.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🍽️</div>
+                    <h3>외식 컨설팅</h3>
+                    <p>외식업 운영 노하우와 마케팅 전략을 제공합니다. 메뉴 개발부터 브랜딩, 고객 유치까지 토탈 솔루션을 제공합니다.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">💰</div>
+                    <h3>사업자 환급</h3>
+                    <p>사업자가 받을 수 있는 각종 환급금과 지원금을 찾아드립니다. 놓치기 쉬운 혜택을 빠짐없이 챙겨드립니다.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">💼</div>
+                    <h3>비즈니스 컨설팅</h3>
+                    <p>사업 전략 수립부터 실행까지 전 과정을 지원합니다. 데이터 기반 분석으로 실질적인 성과를 만들어냅니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>비에스컴퍼니를 선택해야 하는 이유</h2>
+            <p class="subtitle">차별화된 전문성과 실전 경험</p>
+            
+            <div class="features-list">
+                <div class="feature-item">
+                    <div class="icon">⚡</div>
+                    <h3>빠른 대응</h3>
+                    <p>상담 신청 후 24시간 내 연락드립니다</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="icon">🎯</div>
+                    <h3>맞춤형 솔루션</h3>
+                    <p>업종과 상황에 맞는 최적의 전략 제공</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="icon">📊</div>
+                    <h3>데이터 기반 전략</h3>
+                    <p>실제 데이터 분석을 통한 효과적인 마케팅</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="icon">🤝</div>
+                    <h3>지속적인 관리</h3>
+                    <p>일회성이 아닌 장기 파트너십 지향</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2>대표 인사말</h2>
+            <div class="about-content">
+                <p>안녕하십니까. 비에스컴퍼니 대표 배상민입니다.</p>
+                <p>저희는 단순한 마케팅 대행사가 아닌, 고객사의 진정한 성장 파트너가 되고자 합니다. 블로그 콘텐츠부터 영상 제작, SNS 마케팅, 외식업 컨설팅, 사업자 환급까지 다양한 서비스를 통해 고객님의 비즈니스가 한 단계 도약할 수 있도록 최선을 다하겠습니다.</p>
+                <p>실질적인 성과를 만들어내는 것이 저희의 목표입니다. 함께 성장하는 파트너가 되겠습니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>지금 바로 시작하세요</h2>
+            <p>무료 상담을 통해 맞춤형 솔루션을 제안해드립니다</p>
+            <div class="cta-buttons">
+                <a href="https://forms.gle/cs4kZ7Xwyi9U3Rrg7" class="btn-primary" target="_blank">무료 상담 신청</a>
+                <a href="tel:010-5478-5289" class="btn-secondary">📞 전화 상담</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-item">
+                    <h3>업체명</h3>
+                    <p>주식회사 비에스컴퍼니</p>
+                </div>
+                <div class="info-item">
+                    <h3>대표자</h3>
+                    <p>배상민</p>
+                </div>
+                <div class="info-item">
+                    <h3>사업자등록번호</h3>
+                    <p>761-87-02647</p>
+                </div>
+                <div class="info-item">
+                    <h3>주소</h3>
+                    <p>경기도 의정부시 호국로 1195-1, 4층</p>
+                </div>
+                <div class="info-item">
+                    <h3>전화번호</h3>
+                    <p>010-5478-5289</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="privacy">
+        <div class="container">
+            <div class="privacy-content">
+                <h2>개인정보처리방침</h2>
+                
+                <h3>1. 개인정보의 수집 및 이용 목적</h3>
+                <p>비에스컴퍼니(이하 "회사")는 다음의 목적을 위하여 개인정보를 처리합니다.</p>
+                <ul>
+                    <li>상담 신청 및 서비스 제공</li>
+                    <li>고객 문의 응대 및 상담</li>
+                    <li>서비스 안내 및 마케팅 정보 제공</li>
+                </ul>
+                
+                <h3>2. 수집하는 개인정보의 항목</h3>
+                <ul>
+                    <li>필수항목: 이름, 연락처(전화번호), 상담 내용</li>
+                    <li>선택항목: 방문 희망일, 관심 서비스</li>
+                </ul>
+                
+                <h3>3. 개인정보의 보유 및 이용 기간</h3>
+                <ul>
+                    <li>상담 신청 정보: 상담 완료 후 1년</li>
+                    <li>마케팅 정보 제공 동의: 동의 철회 시까지</li>
+                </ul>
+                
+                <h3>4. 개인정보의 제3자 제공</h3>
+                <p>회사는 원칙적으로 이용자의 개인정보를 제1조에서 명시한 범위 내에서만 처리하며, 이용자의 사전 동의 없이는 제3자에게 제공하지 않습니다.</p>
+                
+                <h3>5. 정보주체의 권리</h3>
+                <ul>
+                    <li>개인정보 열람 요구</li>
+                    <li>오류 등이 있을 경우 정정 요구</li>
+                    <li>삭제 요구</li>
+                    <li>처리정지 요구</li>
+                </ul>
+                
+                <h3>6. 개인정보 보호책임자</h3>
+                <ul>
+                    <li>개인정보 보호책임자: 배상민</li>
+                    <li>연락처: 1588-3507</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 비에스컴퍼니. All rights reserved.</p>
+            <p>사업자등록번호: 761-87-02647 | 대표: 배상민</p>
+            <p>경기도 의정부시 호국로 1195-1, 4층 | TEL: 1588-3507</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.service-card, .feature-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s, transform 0.6s';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
